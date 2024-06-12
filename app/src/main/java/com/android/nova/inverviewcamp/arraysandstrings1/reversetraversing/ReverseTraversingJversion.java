@@ -1,4 +1,4 @@
-package com.android.nova.inverviewcamp.arraysandstrings1;
+package com.android.nova.inverviewcamp.arraysandstrings1.reversetraversing;
 
 import java.util.Arrays;
 

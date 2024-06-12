@@ -1,4 +1,4 @@
-package com.android.nova.inverviewcamp.arraysandstrings1;
+package com.android.nova.inverviewcamp.arraysandstrings1.traversingbothends;
 
 import java.util.Arrays;
 
@@ -30,8 +30,11 @@ public class TraverseBothEndsH2Jversion2 {
 
         // find the bum
         int bumIndex = -9;
+        //System.out.println("Andas looking for the bump -------") ;
         for (int i = inputArray.length - 2; i >= 0; i--) {
+            //System.out.println("Comparing -------" + inputArray[i] + " with  >" + inputArray[i + 1]);
             if (inputArray[i] > inputArray[i + 1]) {
+                //System.out.println("Entro! -------");
                 bumIndex = i + 1;
                 break;
             }
@@ -40,6 +43,7 @@ public class TraverseBothEndsH2Jversion2 {
         System.out.println("The bump index is" + bumIndex);
 
         // inputArray[dipIndex + 1]
+
         for (int i = 0; i < dipIndex + 1; i++) {
             if (inputArray[i] > inputArray[dipIndex + 1]) {
                 dipIndex = i;
@@ -48,10 +52,9 @@ public class TraverseBothEndsH2Jversion2 {
         }
 
         // inputArray[bumIndex - 1]
-        for (int i = inputArray.length - 1; i > dipIndex; i--) {
-            if (inputArray[bumIndex] > inputArray[i]) {
+        for (int i = bumIndex + 1; i < inputArray.length; i++) {
+            if (inputArray[i] < inputArray[bumIndex - 1]) {
                 bumIndex = i;
-                break;
             }
         }
 

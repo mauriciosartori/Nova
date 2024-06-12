@@ -1,4 +1,4 @@
-package com.android.nova.inverviewcamp.arraysandstrings1;
+package com.android.nova.inverviewcamp.arraysandstrings1.traversingbothends;
 
 import java.util.Arrays;
 
