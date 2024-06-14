@@ -6,12 +6,6 @@ package com.android.nova.inverviewcamp.arraysandstrings1.reversetraversing
  * to accommodate the result.
  **/
 class ReverseTraversingKVersion {
-//    companion object {
-//        @JvmStatic
-//        fun main(args: Array<String>) {
-//            println("Andas")
-//        }
-//    }
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
