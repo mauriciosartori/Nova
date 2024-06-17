@@ -1,5 +1,7 @@
 package com.android.nova.inverviewcamp
-
+/**
+ *
+ */
 class TemplateClassKVersion {
     companion object {
         @JvmStatic
