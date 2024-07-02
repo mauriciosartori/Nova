@@ -21,6 +21,11 @@ abstract class AuxQueue {
     fun display() {
         myLinkedList.display()
     }
+
+    fun peak(): Int{
+        val tailNode = myLinkedList.tail ?: return 0
+        return tailNode.value
+    }
 }
 
 class LinkedList {
