@@ -8,8 +8,8 @@ class SlidingWindow {
     companion object{
         @JvmStatic
         fun main(args: Array<String>) {
-            val inputArray = intArrayOf(1,2,3,5,2)
-            val target = 8
+            val inputArray = intArrayOf(1,2,3,5,2,19)
+            val target = 21
             println("The input array is ${inputArray.contentToString()}")
             findTargetSum(inputArray, target)
         }
