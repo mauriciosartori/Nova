@@ -13,8 +13,21 @@ class Fibonacci1 {
             displayFibonacci()
         }
 
-        fun displayFibonacci(){
-            
+        fun displayFibonacci() {
+            val result = fibo(7)
+            println("The result of this is $result")
+        }
+
+        fun fibo(currentNumber: Int): Int{
+            // Defining base cases
+            if (currentNumber == 0) {
+                return 1
+            }
+            if (currentNumber == 1) {
+                return 1
+            }
+
+            return fibo(currentNumber - 1 ) + fibo(currentNumber - 2)
         }
 
     }
