@@ -7,7 +7,8 @@ class Combinations {
         @JvmStatic
         fun main(args: Array<String>) {
             val length = 3
-            val inputArray = intArrayOf(1,2,3,4,5,6,7)
+            //val inputArray = intArrayOf(1,2,3,4,5,6,7)
+            val inputArray = intArrayOf(1,2,3)
             println("The input array is ${inputArray.contentToString()}")
             printCombos(inputArray, IntArray(3), 0, 0)
         }
@@ -24,7 +25,6 @@ class Combinations {
             // Find candidates that go into the current buffer index
             for (i in startIndex..< inputArray.size) {
                 buffer[bufferIndex] = inputArray[i]
-
                 printCombos(inputArray, buffer, i + 1, bufferIndex + 1)
             }
         }
