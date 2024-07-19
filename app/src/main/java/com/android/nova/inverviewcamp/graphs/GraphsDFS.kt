@@ -3,7 +3,7 @@ package com.android.nova.inverviewcamp.graphs
 import java.util.Stack
 
 /**
- *
+ * Creating a graph and trasversing it using Depth First Search
  */
 class GraphsDFS {
     companion object {
@@ -19,6 +19,7 @@ class GraphsDFS {
             val startNode = myGraph.listNodes.first()
             startNode.status = LocalGraphStatus.STANDBY
             myStack.push(startNode)
+            myStack.peek()
             while (!myStack.isEmpty()) {
                 val currentNode = myStack.pop()
                 for (itemNode in currentNode.listConnectedNodes) {
