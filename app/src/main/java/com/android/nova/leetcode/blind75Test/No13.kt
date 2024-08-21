@@ -6,8 +6,11 @@ class No13 {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            val result = maxArea(intArrayOf(1,8,6,2,5,4,8,3,7))
-            println("Do something")
+            //val result = maxArea(intArrayOf(1,8,6,2,5,4,8,3,7))
+            //val result = maxArea(intArrayOf(1,1))
+            val result = maxArea(intArrayOf(4,3,2,1,4))
+
+            println("Do something $result")
         }
 
         fun maxArea(height: IntArray): Int {
@@ -25,13 +28,14 @@ class No13 {
             for (i in height.indices) {
                 if (height[i] == start && startIndex == -1) {
                     startIndex = i
+                    continue
                 }
                 if (height[i] == end && endIndex == -1) {
                     endIndex = i
                 }
             }
             val maxHeight = minOf(start, end)
-            return (startIndex - endIndex) * maxHeight
+            return (endIndex - startIndex) * maxHeight
         }
     }
 }
