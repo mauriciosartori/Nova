@@ -1,4 +1,4 @@
-package com.android.nova.leetcode.blind75Test
+package com.android.nova.leetcode.blind75Test.arrays
 
 import java.util.HashMap
 
