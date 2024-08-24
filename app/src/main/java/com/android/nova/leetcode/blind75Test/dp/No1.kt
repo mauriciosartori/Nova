@@ -2,11 +2,13 @@ package com.android.nova.leetcode.blind75Test.dp
 /**
  *
  */
-class TemplateClassKVersion {
+class No1 {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            println("")
+            val result = coinChange(intArrayOf(2), 3)
+            println("The result is $result")
+
         }
         fun coinChange(coins: IntArray, amount: Int): Int {
             val dp = IntArray(amount + 1)
@@ -14,13 +16,19 @@ class TemplateClassKVersion {
 
             for (i in 1..amount) {
                 var min = Int.MAX_VALUE
-
+                if (i== 3){
+                    println("Now do nothing")
+                }
                 for (coin in coinsSorted) {
                     val sum = i - coin
                     if (sum < 0) {
                         break
                     }
-                    min = minOf(min, dp[sum] + 1)
+                    if (dp[sum] == Int.MAX_VALUE) {
+                        min = minOf(min, Int.MAX_VALUE)
+                    } else {
+                        min = minOf(min, dp[sum] + 1)
+                    }
                 }
                 dp[i] = min
             }
