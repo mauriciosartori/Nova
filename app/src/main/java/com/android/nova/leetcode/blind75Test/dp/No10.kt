@@ -6,7 +6,6 @@ class No10 {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            //val result = canJump(intArrayOf(2,3,1,1,4))
             val result = canJump(intArrayOf(3,2,1,0,4))
 
             println("The result for the No 10 is $result")

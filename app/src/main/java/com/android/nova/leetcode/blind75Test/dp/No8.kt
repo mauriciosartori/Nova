@@ -8,6 +8,7 @@ class No8 {
         fun main(args: Array<String>) {
             println("")
         }
+        fun numDecodings(s: String): Int {
             val n = s.length
             val dp = IntArray(n+1){0}
             dp[0] = 1
