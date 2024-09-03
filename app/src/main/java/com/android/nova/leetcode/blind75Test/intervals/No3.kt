@@ -31,6 +31,7 @@ class No3 {
             // Sort by the integer value; if the values are equal, sort by the Boolean (start=true before end=false)
             intervalsList.sortWith(compareBy({ it.first }, { !it.second }))
 
+
             val resultList = ArrayList<IntArray>()
 
             var count = 0
