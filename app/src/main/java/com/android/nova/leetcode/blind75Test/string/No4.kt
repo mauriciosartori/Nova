@@ -6,7 +6,9 @@ class No4 {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            val result = isValid("((")
+            //val result = isValid("((")
+            val result = isValid("){")
+
             println("Result of No4 is $result" )
         }
         fun isValid(s: String): Boolean {
@@ -18,6 +20,9 @@ class No4 {
                 if (char == '(' || char == '[' || char == '{') {
                     stack.addFirst(char)
                 } else {
+                    if (stack.isEmpty()) {
+                        return false
+                    }
                     val lastOpenedChar = stack.removeFirst()
                     when {
                         char == ')' -> {
