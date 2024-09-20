@@ -2,7 +2,7 @@ package com.android.nova.leetcode.blind75Test.dailypractice
 /**
  *
  */
-class `34` {
+class No34 {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
